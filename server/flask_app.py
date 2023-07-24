@@ -59,7 +59,7 @@ def get_url():
         short_url = db_conn.get_short_url(long_url=payload["url"])
         if short_url:
             status_code = 201
-            msg = {"short_url": short_url, msg: ""}
+            msg = {"short_url": short_url, "msg": ""}
         else:
             status_code = 401
             msg = {"short_url": "", "msg": "short url not found."}
